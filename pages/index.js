@@ -72,14 +72,44 @@ export default function Home () {
           </div>
         </div>
 
-        <div className='flex mb-4'>
-          <div className='w-1/2 h-12' />
-          <div className='w-1/2 h-12' />
+        <div className='flex mb-4 '>
+          <div className='w-1/2 p-10 mr-5 rounded overflow-hidden shadow-lg'>
+            <h2 className='text-2xl mb-4'>Services</h2>
+            <ul className='list-disc flex flex-wrap list-inside'>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+            </ul>
+          </div>
+          <div className='w-1/2 p-10 ml-5 rounded overflow-hidden shadow-lg'>
+            <h2 className='text-2xl mb-4'>Sectors</h2>
+            <ul className='list-disc flex flex-wrap list-inside'>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+            </ul>
+          </div>
         </div>
 
       </main>
 
-      <footer />
+      <footer>
+        <div className='flex my-4'>
+          <div className='w-full p-10 bg-gray-800 rounded overflow-hidden shadow-lg'>
+            <p className='text-white'>IDS Website</p>
+          </div>
+        </div>
+      </footer>
 
       <style jsx>{`
        
