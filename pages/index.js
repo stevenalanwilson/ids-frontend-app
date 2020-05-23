@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 
-export default function Home () {
+export default function index () {
   return (
     <div className='container mx-auto'>
       <Head>
