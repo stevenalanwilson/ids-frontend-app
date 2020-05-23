@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function Home () {
   return (
@@ -68,13 +69,11 @@ export default function Home () {
 
       </main>
 
-      <footer>
-        <div className='flex my-4'>
-          <div className='w-full p-10 bg-gray-800 rounded overflow-hidden shadow-lg'>
-            <p className='text-white'>IDS Website</p>
-          </div>
+      <div className='flex my-4'>
+        <div className='w-full'>
+          <Footer />
         </div>
-      </footer>
+      </div>
 
       <style jsx>{`
        
