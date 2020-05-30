@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Card from '../components/Card'
+
+import sectorsData from '../data/sectors'
 
 export default function sectors () {
   return (
@@ -24,9 +27,15 @@ export default function sectors () {
         </div>
 
         <div className='flex my-4'>
-          <div className='w-1/2 p-10'>
-            <p>Sectors</p>
+          <div className='w-1/2'>
+            <h1 className='text-4xl'>Sectors</h1>
           </div>
+        </div>
+
+        <div className='flex flex-wrap mb-4'>
+          {sectorsData.map(function (val) {
+            return <div className='w-1/4'><Card data={val} /></div>
+          })}
         </div>
 
         <div className='flex my-4'>

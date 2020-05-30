@@ -3,6 +3,9 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 
+import sectorsData from '../data/sectors'
+import servicesData from '../data/services'
+
 export default function index () {
   return (
     <div className='container mx-auto'>
@@ -32,27 +35,17 @@ export default function index () {
           <div className='w-1/2 p-10 mr-5 rounded overflow-hidden shadow-lg'>
             <h2 className='text-2xl mb-4'>Services</h2>
             <ul className='list-disc flex flex-wrap list-inside'>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Service</a></li>
+              {servicesData.map(function (val) {
+                return <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>{val.name}</a></li>
+              })}
             </ul>
           </div>
           <div className='w-1/2 p-10 ml-5 rounded overflow-hidden shadow-lg'>
             <h2 className='text-2xl mb-4'>Sectors</h2>
             <ul className='list-disc flex flex-wrap list-inside'>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
-              <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>Sector</a></li>
+              {sectorsData.map(function (val) {
+                return <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>{val.name}</a></li>
+              })}
             </ul>
           </div>
         </div>
