@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
+import Link from 'next/link'
 
 import sectorsData from '../data/sectors'
 import servicesData from '../data/services'
@@ -36,7 +37,7 @@ export default function index () {
             <h2 className='text-2xl mb-4'>Services</h2>
             <ul className='list-disc flex flex-wrap list-inside'>
               {servicesData.map(function (val) {
-                return <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>{val.name}</a></li>
+                return <li className='w-1/3'> <Link href={val.link}><a href={val.link} title={val.name} className='text-blue-500'>{val.name}</a></Link></li>
               })}
             </ul>
           </div>
@@ -44,7 +45,7 @@ export default function index () {
             <h2 className='text-2xl mb-4'>Sectors</h2>
             <ul className='list-disc flex flex-wrap list-inside'>
               {sectorsData.map(function (val) {
-                return <li className='w-1/3'><a href='#' title='#' className='text-blue-500'>{val.name}</a></li>
+                return <li className='w-1/3'> <Link href={val.link}><a href={val.link} title={val.name} className='text-blue-500'>{val.name}</a></Link></li>
               })}
             </ul>
           </div>
