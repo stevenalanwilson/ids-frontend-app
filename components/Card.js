@@ -4,8 +4,8 @@ function Card ({ data }) {
   return (
     <div className='w-full p-5'>
       <div className='w-full rounded overflow-hidden shadow-lg'>
-        <Link href='/sectors'>
-          <a href='#'>
+        <Link href={data.link}>
+          <a href={data.link}>
             <img className='w-full' src='tmp-hero.jpg' alt='Sunset in the mountains' />
           </a>
         </Link>

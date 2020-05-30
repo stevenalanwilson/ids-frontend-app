@@ -1,11 +1,8 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Card from '../components/Card'
 
-import casestudiesData from '../data/casestudies'
-
-export default function casestudies () {
+export default function casestudy () {
   return (
     <div className='container mx-auto'>
       <Head>
@@ -28,14 +25,12 @@ export default function casestudies () {
 
         <div className='flex my-4'>
           <div className='w-1/2'>
-            <h1 className='text-4xl'>Case Studies</h1>
+            <h1 className='text-4xl'>Case Study</h1>
           </div>
         </div>
 
         <div className='flex flex-wrap mb-4'>
-          {casestudiesData.map(function (val) {
-            return <div className='w-1/4'><Card data={val} /></div>
-          })}
+          <p>hello word</p>
         </div>
 
         <div className='flex my-4'>
