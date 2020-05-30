@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import EnquiryCallToAction from '../components/EnquiryCallToAction'
 
 export default function casestudy () {
   return (
@@ -31,6 +32,7 @@ export default function casestudy () {
 
         <div className='flex flex-wrap mb-4'>
           <p>hello word</p>
+          <EnquiryCallToAction />
         </div>
 
         <div className='flex my-4'>
