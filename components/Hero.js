@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 function Hero () {
   return (
     <div className='w-full bg-gray-100 rounded overflow-hidden shadow-lg'>
@@ -7,9 +9,11 @@ function Hero () {
         <p className='text-gray-700 text-base'>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
         </p>
-        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-5 rounded'>
+        <Link href='/casestudy'>
+          <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 my-5 rounded'>
              Read more
-        </button>
+          </button>
+        </Link>
       </div>
     </div>
   )
