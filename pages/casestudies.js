@@ -4,8 +4,10 @@ import Footer from '../components/Footer'
 import Card from '../components/Card'
 
 import casestudiesData from '../data/casestudies'
+import sectorsData from '../data/sectors'
+import servicesData from '../data/services'
 
-export default function casestudies () {
+export default function casestudies (props) {
   return (
     <div className='container mx-auto'>
       <Head>
@@ -28,7 +30,7 @@ export default function casestudies () {
 
         <div className='flex my-4'>
           <div className='w-1/2'>
-            <h1 className='text-4xl'>Case Studies</h1>
+            <h1 className='text-4xl'>{props.category}</h1>
           </div>
         </div>
 
@@ -52,4 +54,24 @@ export default function casestudies () {
 
     </div>
   )
+}
+
+casestudies.getInitialProps = async (context) => {
+  const { type } = context.query
+  const { id } = context.query
+
+  const categoryType = type => {
+    switch (type) {
+      case 'service':
+        return 'Case Studies by ' + servicesData[id].name
+      case 'sector':
+        return 'Case Studies by ' + sectorsData[id].name
+      default:
+        return 'Case Studies'
+    }
+  }
+
+  return {
+    category: categoryType(type)
+  }
 }
