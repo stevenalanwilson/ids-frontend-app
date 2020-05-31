@@ -35,7 +35,7 @@ export default function casestudies (props) {
         </div>
 
         <div className='flex flex-wrap mb-4'>
-          {casestudiesData.map(function (val) {
+          {props.casestudies.map(function (val) {
             return <div className='w-1/4'><Card data={val} /></div>
           })}
         </div>
@@ -71,7 +71,25 @@ casestudies.getInitialProps = async (context) => {
     }
   }
 
+  const filterCasestudies = type => {
+    switch (type) {
+      case 'service':
+        return casestudiesData.filter(function (casestudy) {
+          return casestudy.services.includes(servicesData[id].id)
+        })
+      case 'sector':
+        return casestudiesData.filter(function (casestudy) {
+          return casestudy.sectors.includes(sectorsData[id].id)
+        })
+      default:
+        return casestudiesData
+    }
+  }
+
+  console.log(casestudies)
+
   return {
-    category: categoryType(type)
+    category: categoryType(type),
+    casestudies: filterCasestudies(type)
   }
 }
