@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
+import EnquiryCallToAction from '../components/EnquiryCallToAction'
+
 export default function contact () {
   return (
     <div className='container mx-auto'>
@@ -24,8 +26,18 @@ export default function contact () {
         </div>
 
         <div className='flex my-4'>
-          <div className='w-1/2 p-10'>
-            <p>Contact</p>
+          <div className='w-2/3'>
+            <h1 className='text-4xl'>Contact</h1>
+          </div>
+        </div>
+
+        <div className='flex my-4'>
+          <div className='w-2/3 p-5'>
+            <EnquiryCallToAction />
+          </div>
+          <div className='w-1/3 p-5'>
+            <p>+44 1889 568573</p>
+            <p>enquiries@idsdesigns.co.uk</p>
           </div>
         </div>
 
