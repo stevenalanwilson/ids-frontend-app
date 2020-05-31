@@ -1,4 +1,4 @@
-const services = [
+const casestudies = [
   {
     id: 0,
     name: 'Case Study One',
@@ -47,4 +47,4 @@ const services = [
 
   }
 ]
-export default services
+export default casestudies
