@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import randomImageGenerator from '../service/randomImageGenerator'
 
 function Card ({ data }) {
   return (
