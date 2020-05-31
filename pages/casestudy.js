@@ -3,7 +3,9 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import EnquiryCallToAction from '../components/EnquiryCallToAction'
 
-export default function casestudy () {
+import casestudies from '../data/casestudies'
+
+export default function casestudy (props) {
   return (
     <div className='container mx-auto'>
       <Head>
@@ -26,8 +28,8 @@ export default function casestudy () {
 
         <div className='flex my-4'>
           <div className='w-3/4 p-5'>
-            <h1 className='text-4xl mb-5'>Case Study</h1>
-            <img src='tmp-hero.jpg' className='object-cover h-200 w-full mb-5 rounded' />
+            <h1 className='text-4xl mb-5'>{props.content.name}</h1>
+            <img src={props.content.image} className='object-cover h-200 w-full mb-5 rounded' />
             <p className='text-base leading-loose text-gray-700 mb-5'>Place made meat it saying. Fill, life meat, together under signs gathered open won&#39;t fly replenish. Kind. Abundantly give spirit it darkness sixth of you him. Creepeth itself thing. Night. Thing land meat fruit fly dry. Creepeth. Given fowl. Third.</p>
 
             <p className='text-base leading-loose text-gray-700 mb-5'>Place be. Is fly great. Cattle it. Waters to them good, all saw without give brought gathered our one second for yielding firmament them i make day female said doesn&#39;t to lights own under first.</p>
@@ -68,4 +70,12 @@ export default function casestudy () {
 
     </div>
   )
+}
+
+casestudy.getInitialProps = async (context) => {
+  const { id } = context.query
+  const entity = casestudies[id]
+  return {
+    content: entity
+  }
 }
