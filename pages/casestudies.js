@@ -30,7 +30,8 @@ export default function casestudies (props) {
 
         <div className='flex my-4'>
           <div className='w-1/2'>
-            <h1 className='text-4xl'>{props.category}</h1>
+            <h1 className='text-4xl'>Case Studies</h1>
+            <h2 className='text-2xl'>{props.category}</h2>
           </div>
         </div>
 
@@ -63,11 +64,11 @@ casestudies.getInitialProps = async (context) => {
   const categoryType = type => {
     switch (type) {
       case 'service':
-        return 'Case Studies by ' + servicesData[id].name
+        return 'Service:  ' + servicesData[id].name
       case 'sector':
-        return 'Case Studies by ' + sectorsData[id].name
+        return 'Sector:  ' + sectorsData[id].name
       default:
-        return 'Case Studies'
+        return ''
     }
   }
 
