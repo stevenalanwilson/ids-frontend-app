@@ -37,7 +37,7 @@ export default function index () {
             <h2 className='text-2xl mb-4'>Services</h2>
             <ul className='flex flex-wrap list-none'>
               {servicesData.map(function (val) {
-                return <li className='w-1/3'> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.name}</a></Link></li>
+                return <li className='w-1/3' key={val.id}> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.name}</a></Link></li>
               })}
             </ul>
           </div>
@@ -45,7 +45,7 @@ export default function index () {
             <h2 className='text-2xl mb-4'>Sectors</h2>
             <ul className='flex flex-wrap'>
               {sectorsData.map(function (val) {
-                return <li className='w-1/3'> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.name}</a></Link></li>
+                return <li className='w-1/3' key={val.id}> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.name}</a></Link></li>
               })}
             </ul>
           </div>
