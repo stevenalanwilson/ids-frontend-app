@@ -58,11 +58,16 @@ export default function index () {
         <div className='flex mb-4 '>
           <div className='w-1/2 p-10 mr-5 rounded overflow-hidden shadow-lg'>
             <h2 className='text-2xl mb-4'>Testimonials</h2>
-            <p className='italic text-lg text-gray-500'>"{testimonial.testimonials[0]}" - <Link href={testimonial.link}><a className='underline'>{testimonial.name}</a></Link></p>
+            <p className='italic text-lg text-gray-500'>"{testimonial.testimonials[0]}" - <Link href={testimonial.link}><a className='underline'>{testimonial.company}</a></Link></p>
 
           </div>
           <div className='w-1/2 p-10 ml-5 rounded overflow-hidden shadow-lg'>
-            <h2 className='text-2xl mb-4'>Sectors</h2>
+            <h2 className='text-2xl mb-4'>Who we work with</h2>
+            <ul className='flex flex-wrap list-none'>
+              {casestudyData.map(function (val) {
+                return <li className='w-1/3' key={val.id}> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.company}</a></Link></li>
+              })}
+            </ul>
 
           </div>
         </div>

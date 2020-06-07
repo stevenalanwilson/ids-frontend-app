@@ -2,6 +2,7 @@ const casestudies = [
   {
     id: 0,
     name: 'Case Study One',
+    company: 'Construction Inc',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
     link: '/casestudy?id=0',
     image: '/tmp-image-00001.jpeg',
@@ -18,6 +19,7 @@ const casestudies = [
   {
     id: 1,
     name: 'Case Study Two',
+    company: 'Plumbing Company',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
     link: '/casestudy?id=1',
     image: '/tmp-image-00002.jpeg',
@@ -36,6 +38,7 @@ const casestudies = [
   {
     id: 2,
     name: 'Case Study Three',
+    company: 'Home Improvements Ltd',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
     link: 'casestudy?id=2',
     image: '/tmp-image-00018.jpeg',
@@ -53,6 +56,7 @@ const casestudies = [
   {
     id: 3,
     name: 'Case Study Four',
+    company: 'Bills Construction',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
     link: '/casestudy?id=3',
     image: '/tmp-image-00004.jpeg',
@@ -69,6 +73,7 @@ const casestudies = [
   {
     id: 4,
     name: 'Case Study Five',
+    company: 'Matlock Council',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
     link: '/casestudy?id=4',
     image: '/tmp-image-00005.jpeg',
@@ -87,6 +92,7 @@ const casestudies = [
   {
     id: 5,
     name: 'Case Study Six',
+    company: 'Toms Home Improvements',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.',
     link: '/casestudy?id=5',
     image: '/tmp-image-00006.jpeg',
