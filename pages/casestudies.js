@@ -37,7 +37,7 @@ export default function casestudies (props) {
 
         <div className='flex flex-wrap mb-4'>
           {props.casestudies.map(function (val) {
-            return <div className='w-1/4'><Card data={val} /></div>
+            return <div className='w-1/4' key={val.id}><Card data={val} /></div>
           })}
         </div>
 
