@@ -10,6 +10,9 @@ const casestudies = [
     ],
     services: [
       3
+    ],
+    testimonials: [
+      'Odio. Viverra nostra, eleifend conubia velit. Nam sit. Lacus mi.'
     ]
   },
   {
@@ -23,6 +26,10 @@ const casestudies = [
     ],
     services: [
       1, 2
+    ],
+    testimonials: [
+      'Nec proin vitae. Class ornare Eleifend eleifend hac donec. Justo.',
+      'Elit mi eu adipiscing tortor mus praesent etiam ultricies duis.'
     ]
 
   },
@@ -37,6 +44,9 @@ const casestudies = [
     ],
     services: [
       0
+    ],
+    testimonials: [
+      'Dictum odio gravida habitasse dis curae; nibh mattis consequat enim.'
     ]
 
   },
@@ -51,8 +61,10 @@ const casestudies = [
     ],
     services: [
       0, 3
+    ],
+    testimonials: [
+      'Magnis. Eleifend purus nibh vehicula. Non in ornare curae; donec.'
     ]
-
   },
   {
     id: 4,
@@ -65,6 +77,10 @@ const casestudies = [
     ],
     services: [
       1, 2
+    ],
+    testimonials: [
+      'Ligula ut sociosqu pharetra tincidunt venenatis curae; Condimentum lectus nullam.',
+      'Fringilla velit justo sollicitudin sodales vitae et vivamus magnis leo.'
     ]
 
   },
@@ -79,6 +95,10 @@ const casestudies = [
     ],
     services: [
       3, 2
+    ],
+    testimonials: [
+      'Dolor dui tristique curabitur parturient imperdiet scelerisque pede nonummy. Dis.',
+      'Fermentum, sociis imperdiet, mus primis, vitae parturient dolor Habitasse senectus.'
     ]
 
   }
