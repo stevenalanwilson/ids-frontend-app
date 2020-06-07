@@ -9,7 +9,7 @@ function Card ({ data }) {
     <div className='w-full p-5'>
       <div className='w-full rounded overflow-hidden shadow-lg'>
         <Link href={data.link}>
-          <a href={data.link}>
+          <a>
             <img className='w-full' src={data.image} alt='Sunset in the mountains' />
           </a>
         </Link>
