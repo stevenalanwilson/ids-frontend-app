@@ -7,6 +7,7 @@ import Link from 'next/link'
 import casestudiesData from '../data/casestudies'
 import sectorsData from '../data/sectors'
 import servicesData from '../data/services'
+import clientData from '../data/clients'
 
 export default function casestudies (props) {
   return (
@@ -86,6 +87,8 @@ casestudies.getInitialProps = async (context) => {
         return 'Service:  ' + servicesData[id].name
       case 'sector':
         return 'Sector:  ' + sectorsData[id].name
+      case 'client':
+        return 'Client:  ' + clientData[id].name
       default:
         return ''
     }
@@ -101,12 +104,14 @@ casestudies.getInitialProps = async (context) => {
         return casestudiesData.filter(function (casestudy) {
           return casestudy.sectors.includes(sectorsData[id].id)
         })
+      case 'client':
+        return casestudiesData.filter(function (casestudy) {
+          return casestudy.company === clientData[id].id
+        })
       default:
         return casestudiesData
     }
   }
-
-  console.log(casestudies)
 
   return {
     category: categoryType(type),

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import sectorsData from '../data/sectors'
 import servicesData from '../data/services'
 import casestudyData from '../data/casestudies'
+import clientData from '../data/clients'
 
 const randomTestimonial = casestudies => casestudies[Math.floor(Math.random() * (casestudies.length - 1))]
 const testimonial = randomTestimonial(casestudyData)
@@ -64,8 +65,8 @@ export default function index () {
           <div className='w-1/2 p-10 ml-5 rounded overflow-hidden shadow-lg'>
             <h2 className='text-2xl mb-4'>Who we work with</h2>
             <ul className='flex flex-wrap list-none'>
-              {casestudyData.map(function (val) {
-                return <li className='w-1/3' key={val.id}> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.company}</a></Link></li>
+              {clientData.map(function (val) {
+                return <li className='w-1/3' key={val.id}> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.name}</a></Link></li>
               })}
             </ul>
 
