@@ -19,10 +19,10 @@ function Card ({ data }) {
         </div>
         <div class='px-6 py-1'>
           {hasSectors && data.sectors.map(function (sector) {
-            return <Link href={sectorData.find(s => s.id === sector).link} key={sector}><a className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2' key={sector}>{sectorData.find(s => s.id === sector).name}</a></Link>
+            return <Link href={sectorData.find(s => s.id === sector).link} key={sector}><a className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2' key={sector}>{sectorData.find(s => s.id === sector).name}</a></Link>
           })}
           {hasServices && data.services.map(function (sector) {
-            return <Link href={serviceData.find(s => s.id === sector).link} key={sector}><a className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2' key={sector}>{serviceData.find(s => s.id === sector).name}</a></Link>
+            return <Link href={serviceData.find(s => s.id === sector).link} key={sector}><a className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2' key={sector}>{serviceData.find(s => s.id === sector).name}</a></Link>
           })}
         </div>
       </div>
