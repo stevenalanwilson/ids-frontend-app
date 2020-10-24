@@ -17,7 +17,9 @@ const buttonStyles = [
   'hover:text-white',
   'hover:bg-ids-orange',
   'py-1',
-  'px-3'
+  'px-3',
+  'font-open-sans',
+  'font-normal'
 ]
 
 function MenuLink ({ data }) {
