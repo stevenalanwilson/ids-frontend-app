@@ -22,7 +22,7 @@ const buttonStyles = [
 
 function MenuLink ({ data }) {
   return (
-    <li className='mr-3'>
+    <li className='mr-6'>
       <Link href={data.link}>
         <a href='#' className={buttonStyles.join(' ').toString()}>{data.name}</a>
       </Link>
