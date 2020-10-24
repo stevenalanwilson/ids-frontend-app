@@ -4,7 +4,8 @@ import MenuLink from '../components/MenuLink'
 
 const howCanWeHelp = {
   name: 'How can we help',
-  link: '/contect'
+  link: '/contect',
+  size: 'text-base'
 }
 
 const menuData = [
@@ -45,7 +46,7 @@ function Header () {
           <li className='ml-auto'>
             <CallToActionLink data={howCanWeHelp} />
             <Link href='tel:5554280940'>
-              <a className='inline-block py-1 px-3 ml-2 text-black cursor-not-allowed' href='tel:5554280940'>01889 568573</a>
+              <a className='inline-block py-1 px-3 ml-2 font-open-sans font-light text-black cursor-not-allowed' href='tel:5554280940'>01889 568573</a>
             </Link>
           </li>
         </ul>
