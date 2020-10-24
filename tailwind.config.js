@@ -10,6 +10,14 @@ module.exports = {
         'ids-orange': '#E55B13',
         'ids-green': '#7A871E',
         'ids-dark-green': '01352F'
+      },
+      height: {
+        '200px': '200px',
+        '400px': '400px',
+        '600px': '600px'
+      },
+      width: {
+        inherit: 'inherit'
       }
     }
   },
