@@ -18,14 +18,16 @@ const ctaButtonStyles = [
   'hover:border-ids-orange',
   'hover:text-ids-orange',
   'text-white hover:bg-white',
-  'py-1',
-  'px-3'
+  'py-3',
+  'px-6',
+  'font-open-sans',
+  'font-light'
 ]
 
 function CallToActionLink ({ data }) {
   return (
     <Link href={data.link}>
-      <a className={ctaButtonStyles.join(' ').toString()} href={data.link}>
+      <a className={data.size + ' ' + ctaButtonStyles.join(' ').toString()} href={data.link}>
         {data.name}
         <FontAwesomeIcon size='lg' icon={faArrowCircleRight} className='ml-2' />
       </a>
