@@ -1,4 +1,29 @@
 import Link from 'next/link'
+import CallToActionLink from '../components/CallToActionLink'
+import MenuLink from '../components/MenuLink'
+
+const howCanWeHelp = {
+  name: 'How can we help',
+  link: '/contect'
+}
+
+const menuData = [
+  {
+    id: 0,
+    name: 'Services',
+    link: '/services'
+  },
+  {
+    id: 1,
+    name: 'Sectors',
+    link: '/services'
+  },
+  {
+    id: 2,
+    name: 'Case Studios',
+    link: '/casestudies'
+  }
+]
 
 function Header () {
   return (
@@ -12,28 +37,16 @@ function Header () {
               </a>
             </Link>
           </li>
-          <li className='mr-3'>
-            <Link href='/services'>
-              <a className='inline-block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-1 px-3' href='#'>Services</a>
-            </Link>
-          </li>
-          <li className='mr-3'>
-            <Link href='/sectors'>
-              <a className='inline-block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-1 px-3' href='#'>Sectors</a>
-            </Link>
-          </li>
-          <li className='mr-3'>
-            <Link href='/casestudies'>
-              <a className='inline-block border border-white rounded hover:border-gray-200 text-blue-500 hover:bg-gray-200 py-1 px-3' href='#'>Case Studies</a>
-            </Link>
-          </li>
+
+          {menuData.map(function (val) {
+            return <MenuLink key={val.key} data={val} />
+          })}
+
           <li className='ml-auto'>
-            <Link href='/contact'>
-              <a className='inline-block border bg-ids-orange border-blue-500 rounded hover:border-blue-500 hover:text-blue-500 text-white hover:bg-gray-200 py-1 px-3' href='#'>How can we help you?</a>
+            <CallToActionLink data={howCanWeHelp} />
+            <Link href='tel:5554280940'>
+              <a className='inline-block py-1 px-3 ml-2 text-black cursor-not-allowed' href='tel:5554280940'>01889 568573</a>
             </Link>
-          </li>
-          <li className='ml-auto'>
-            <a className='inline-block py-1 px-3  text-gray-400 cursor-not-allowed' href='#'>01889 568573</a>
           </li>
         </ul>
       </nav>
