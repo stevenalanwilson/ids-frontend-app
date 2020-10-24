@@ -29,15 +29,12 @@ const index = props => {
         <meta name='theme-color' content='#ffffff' />
       </Head>
 
-      <main>
-        <div className='flex my-4'>
-          <div className='w-full p-2'>
+      <main className='relative w-full'>
+        <div>
+          <div>
             <Header />
+            <Hero />
           </div>
-        </div>
-
-        <div className='flex my-4'>
-          <Hero />
         </div>
 
         <div className='flex mb-4 '>
