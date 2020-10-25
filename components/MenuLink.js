@@ -10,7 +10,7 @@ const buttonStyles = [
   ...transistionStyles,
   'inline-block',
   'border',
-  'border-white',
+  'border-transparent',
   'rounded',
   'text-black',
   'hover:border-ids-orange',
