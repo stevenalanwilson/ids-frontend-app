@@ -61,7 +61,7 @@ const index = props => {
             <div className='w-1/2 p-10'>
               <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Sectors</h2>
               <ul className='flex flex-wrap'>
-                {props.services.items.map(entry => {
+                {props.sectors.items.map(entry => {
                   return <li className='w-1/3 flex-none p-2'><Card data={entry} /></li>
                 }
                 )}
@@ -115,8 +115,13 @@ index.getInitialProps = async () => {
     content_type: 'service'
   })
 
+  const sectors = await client.getEntries({
+    content_type: 'sector'
+  })
+
   return {
-    services: services
+    services: services,
+    sectors: sectors
   }
 }
 
