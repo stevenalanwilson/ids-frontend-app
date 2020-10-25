@@ -19,6 +19,11 @@ module.exports = {
       width: {
         inherit: 'inherit'
       },
+      minHeight: {
+        '40px': '40px',
+        '80px': '80px',
+        '85px': '85px'
+      },
       fontFamily: {
         'open-sans': ['Open Sans', 'sans-serif;']
       },

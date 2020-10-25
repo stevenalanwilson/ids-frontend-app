@@ -2,14 +2,14 @@ import Link from 'next/link'
 
 function Footer () {
   return (
-    <footer className='p-10 bg-gray-800 rounded overflow-hidden shadow-lg'>
+    <footer className='p-10 bg-black'>
 
       <nav>
         <ul className='flex items-center'>
           <li className='mr-6'>
             <Link href='/index'>
               <a href='#'>
-                <img src='../ids-logo-white.svg' alt='Logo' className='h-16' />
+                <img src='../ids-logo.svg' alt='Logo' className='h-16' />
               </a>
             </Link>
           </li>
