@@ -16,7 +16,7 @@ const ctaButtonStyles = [
   'border-ids-orange',
   'rounded',
   'text-white',
-  'hover:border-ids-orange',
+  'hover:border-black',
   'hover:bg-white',
   'hover:text-black',
   'py-3',
