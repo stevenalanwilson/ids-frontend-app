@@ -81,9 +81,10 @@ const index = props => {
             <div className='w-full p-10 ml-5 '>
               <h2 className='text-5xl text-black font-open-sans font-light mb-4'>Who we work with</h2>
               <ul className='flex flex-wrap list-none'>
-                {clientData.map(function (val) {
-                  return <li className='w-1/3' key={val.id}> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.name}</a></Link></li>
-                })}
+                {props.clients.items.map(entry => {
+                  return <li className='w-1/6 flex-none p-2'><img src={entry.fields.logo.fields.file.url} alt={entry.fields.logo.fields.title} /></li>
+                }
+                )}
               </ul>
 
             </div>
@@ -111,6 +112,10 @@ const index = props => {
 index.getInitialProps = async () => {
   const client = contentfulClient(config)
 
+  const clients = await client.getEntries({
+    content_type: 'client'
+  })
+
   const services = await client.getEntries({
     content_type: 'service'
   })
@@ -121,7 +126,8 @@ index.getInitialProps = async () => {
 
   return {
     services: services,
-    sectors: sectors
+    sectors: sectors,
+    clients: clients
   }
 }
 
