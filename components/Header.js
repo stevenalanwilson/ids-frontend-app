@@ -21,7 +21,7 @@ const menuData = [
   },
   {
     id: 2,
-    name: 'Case Studios',
+    name: 'Case Studies',
     link: '/casestudies'
   }
 ]
