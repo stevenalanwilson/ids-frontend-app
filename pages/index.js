@@ -22,7 +22,7 @@ const index = props => {
   const { isSticky, element } = useSticky()
 
   return (
-    <div className='container shadow-md mx-auto'>
+    <div className='shadow-md mx-auto'>
       <Head>
         <title>IDS Website - Prototype</title>
         <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
@@ -42,51 +42,59 @@ const index = props => {
           </div>
         </div>
 
-        <div className='flex pb-4 bg-ids-dark-green'>
-          <div className='w-full pt-4 px-10 pb-10 mr-5'>
-            <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Services</h2>
-            <ul className='flex flex-wrap list-none'>
-              {props.services.items.map(entry => {
-                return <li className='w-1/6 flex-none p-2'><Card data={entry} /></li>
-              }
-              )}
-            </ul>
+        <div className='pb-4 bg-ids-dark-green'>
+          <div className='container mx-auto '>
+            <div className='w-full pt-4 px-10 pb-10'>
+              <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Services</h2>
+              <ul className='flex flex-wrap list-none'>
+                {props.services.items.map(entry => {
+                  return <li className='w-1/6 flex-none p-2'><Card data={entry} /></li>
+                }
+                )}
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className='flex pb-4 bg-ids-green'>
-          <div className='w-1/2 p-10 ml-5'>
-            <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Sectors</h2>
-            <ul className='flex flex-wrap'>
-              {props.services.items.map(entry => {
-                return <li className='w-1/3 flex-none p-2'><Card data={entry} /></li>
-              }
-              )}
-            </ul>
-          </div>
+        <div className='pb-4 bg-ids-green'>
+          <div className='container flex mx-auto '>
+            <div className='w-1/2 p-10'>
+              <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Sectors</h2>
+              <ul className='flex flex-wrap'>
+                {props.services.items.map(entry => {
+                  return <li className='w-1/3 flex-none p-2'><Card data={entry} /></li>
+                }
+                )}
+              </ul>
+            </div>
 
-          <div className='w-1/2 p-10 mr-5'>
-            <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Testimonials</h2>
-            <p className='italic text-2xl font-open-sans font-light text-white'>"{testimonial.testimonials[0]}" - <Link href={testimonial.link}><a className='underline'>{testimonial.company}</a></Link></p>
+            <div className='w-1/2 p-10'>
+              <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Testimonials</h2>
+              <p className='italic text-2xl font-open-sans font-light text-white'>"{testimonial.testimonials[0]}" - <Link href={testimonial.link}><a className='underline'>{testimonial.company}</a></Link></p>
 
-          </div>
-        </div>
-
-        <div className='flex'>
-          <div className='w-full p-10 ml-5 '>
-            <h2 className='text-5xl text-black font-open-sans font-light mb-4'>Who we work with</h2>
-            <ul className='flex flex-wrap list-none'>
-              {clientData.map(function (val) {
-                return <li className='w-1/3' key={val.id}> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.name}</a></Link></li>
-              })}
-            </ul>
-
+            </div>
           </div>
         </div>
 
-        <div className='flex'>
-          <div className='w-full'>
-            <Footer />
+        <div className='pb-4'>
+          <div className='container mx-auto '>
+            <div className='w-full p-10 ml-5 '>
+              <h2 className='text-5xl text-black font-open-sans font-light mb-4'>Who we work with</h2>
+              <ul className='flex flex-wrap list-none'>
+                {clientData.map(function (val) {
+                  return <li className='w-1/3' key={val.id}> <Link href={val.link}><a href={val.link} title={val.name} className='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-gray-700 hover:text-gray-200 mr-2 mb-2'>{val.name}</a></Link></li>
+                })}
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        <div className='bg-black'>
+          <div className='container mx-auto '>
+            <div className='w-full'>
+              <Footer />
+            </div>
           </div>
         </div>
       </main>
