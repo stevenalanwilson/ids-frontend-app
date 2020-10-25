@@ -28,7 +28,7 @@ const menuData = [
 
 function Header () {
   return (
-    <header className='py-4 fixed z-50 top-0 left-0 w-full'>
+    <header className='py-4 fixed z-50 top-0 left-0 w-full bg-white bg-opacity-75'>
       <nav className='container mx-auto px-4'>
         <ul className='flex items-center'>
           <li className='mr-6'>
