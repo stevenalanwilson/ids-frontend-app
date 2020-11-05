@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
-import PageHeader from '../components/PageHeader'
+import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 
 import useSticky from '../hooks/useSticky.js'
@@ -24,7 +24,7 @@ const SiteLayout = ({ children }) => {
         <div>
           <div>
             <Header sticky={isSticky} />
-            <PageHeader element={element} />
+            <Hero element={element} />
           </div>
         </div>
 
