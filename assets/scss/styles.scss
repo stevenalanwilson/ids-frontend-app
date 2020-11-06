@@ -3,12 +3,23 @@
 @tailwind utilities;
 
 
-.triangle-bottomleft {
+.green-triangle-bottomleft {
     position: absolute;
     left: 0px;
     bottom: 0px;
     width: 0px;
     height: 0;
     border-bottom: 100px solid #01352F;
+    border-left: 100vw solid transparent;
+  }
+
+
+  .white-triangle-bottomleft {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    height: 0;
+    border-bottom: 100px solid #fff;
     border-left: 100vw solid transparent;
   }

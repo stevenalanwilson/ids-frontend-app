@@ -17,7 +17,7 @@ const menuData = [
   {
     id: 1,
     name: 'Sectors',
-    link: '/services'
+    link: '/sectors'
   },
   {
     id: 2,

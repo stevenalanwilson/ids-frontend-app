@@ -12,7 +12,10 @@ module.exports = {
         'ids-dark-green': '#01352F'
       },
       height: {
+        '50px': '50px',
+        '100px': '100px',
         '200px': '200px',
+        '300px': '300px',
         '400px': '400px',
         '600px': '600px'
       },
@@ -28,6 +31,7 @@ module.exports = {
         'open-sans': ['Open Sans', 'sans-serif;']
       },
       inset: {
+        '50px': '50px',
         '100px': '100px',
         '150px': '150px'
       }

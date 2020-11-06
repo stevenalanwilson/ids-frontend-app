@@ -27,7 +27,7 @@ function Hero ({ element }) {
           <CallToActionLink data={howCanWeHelp} />
         </div>
       </div>
-      <div className='triangle-bottomleft' />
+      <div className='green-triangle-bottomleft' />
     </div>
   )
 }
