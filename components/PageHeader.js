@@ -25,7 +25,7 @@ function PageHeader ({ element }) {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
           </p>
         </div>
-      </div>]
+      </div>
       <div className='green-triangle-bottomleft' />
     </div>
   )
