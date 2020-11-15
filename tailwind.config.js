@@ -31,6 +31,8 @@ module.exports = {
         'open-sans': ['Open Sans', 'sans-serif;']
       },
       inset: {
+        '15px': '15px',
+        '25px': '25px',
         '50px': '50px',
         '100px': '100px',
         '150px': '150px'
