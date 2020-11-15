@@ -8,8 +8,6 @@ const transistionStyles = [
     'ease-in-out'
   ]
   
-
-
   function FilterLink ({ data, category, current }) {
     const buttonStyles = [
         ...transistionStyles,

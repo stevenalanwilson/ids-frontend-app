@@ -2,7 +2,7 @@ import Card from '../components/Card'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import PageHeader from '../components/PageHeader'
+import CaseStudiesHeader from '../components/CaseStudiesHeader'
 import FilterLink from '../components/FilterLink'
 import useSticky from '../hooks/useSticky.js'
 
@@ -30,7 +30,7 @@ function Index({ allSectors, allServices, sector, casestudies, current}) {
         <div>
           <div>
             <Header sticky={isSticky} />
-            <PageHeader element={element}  entity={sector} />
+            <CaseStudiesHeader element={element} />
           </div>
         </div>
       <div className='pb-4 bg-ids-dark-green'>
