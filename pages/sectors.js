@@ -7,7 +7,7 @@ import useSticky from '../hooks/useSticky.js'
 
 
 
-import { getAllSectors, getASectorByID, getAllCaseStuies, getCaseStuiesBySectors } from '../lib/api'
+import { getAllSectors, getASectorByID, getAllCaseStuies, getCaseStuiesBySector } from '../lib/api'
 
 function Index({ allSectors, sector, casestudies}) {
   const { isSticky, element } = useSticky()
@@ -37,7 +37,7 @@ function Index({ allSectors, sector, casestudies}) {
           <div className='w-full pt-4 px-10 pb-10'>
             <ul className='flex flex-wrap list-none'>
               {allSectors.items.map(entry => {
-                return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/services'/></li>
+                return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/sectors'/></li>
               }
               )}
             </ul>
@@ -78,7 +78,7 @@ export async function getServerSideProps(context) {
   let sector = allSectors.items[0]
   if(context.query.id) {
     sector = await getASectorByID(context.query.id)
-    casestudies = await getCaseStuiesBySectors(context.query.id)
+    casestudies = await getCaseStuiesBySector(context.query.id)
   } 
   return {
     props: { allSectors, sector, casestudies },
