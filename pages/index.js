@@ -45,7 +45,7 @@ export default function Index({ allServices, allSectors, allClients }) {
             <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Services</h2>
             <ul className='flex flex-wrap list-none'>
               {allServices.items.map(entry => {
-                return <li className='w-1/6 flex-none p-2'><Card data={entry} /></li>
+                return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/services' /></li>
               }
               )}
             </ul>
@@ -59,7 +59,7 @@ export default function Index({ allServices, allSectors, allClients }) {
             <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Sectors</h2>
             <ul className='flex flex-wrap'>
               {allSectors.items.map(entry => {
-                return <li className='w-1/3 flex-none p-2'><Card data={entry} /></li>
+                return <li className='w-1/3 flex-none p-2'><Card data={entry} path='/services' /></li>
               }
               )}
             </ul>

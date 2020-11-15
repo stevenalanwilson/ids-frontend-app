@@ -9,9 +9,9 @@ import useSticky from '../hooks/useSticky.js'
 
 
 
-import { getAllServices, getAServiceByID } from '../lib/api'
+import { getAllServices, getAServiceByID, getAllCaseStuies, getCaseStuiesByService } from '../lib/api'
 
-function Index({ allServices, service}) {
+function Index({ allServices, service, casestudies}) {
   const { isSticky, element } = useSticky()
   return (
     <>
@@ -39,7 +39,7 @@ function Index({ allServices, service}) {
           <div className='w-full pt-4 px-10 pb-10'>
             <ul className='flex flex-wrap list-none'>
               {allServices.items.map(entry => {
-                return <li className='w-1/6 flex-none p-2'><Card data={entry} /></li>
+                return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/services'/></li>
               }
               )}
             </ul>
@@ -52,8 +52,8 @@ function Index({ allServices, service}) {
           <div className='w-full pt-4 px-10 pb-10'>
             <h2 className='text-5xl text-black font-open-sans font-light mb-4'>Case studies</h2>
             <ul className='flex flex-wrap list-none'>
-              {allServices.items.map(entry => {
-                return <li className='w-1/6 flex-none p-2'><Card data={entry} /></li>
+              {casestudies.items.map(entry => {
+                return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/casestudy'/></li>
               }
               )}
             </ul>
@@ -76,12 +76,14 @@ function Index({ allServices, service}) {
 export async function getServerSideProps(context) {
   console.log(context.query.id)
   const allServices = await getAllServices()
+  let casestudies = await getAllCaseStuies()
   let service = allServices.items[0]
   if(context.query.id) {
     service = await getAServiceByID(context.query.id)
+    casestudies = await getCaseStuiesByService(context.query.id)
   } 
   return {
-    props: { allServices, service },
+    props: { allServices, service, casestudies },
   }
 
 }
