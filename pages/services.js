@@ -31,7 +31,7 @@ function Index({ allServices, service}) {
         <div>
           <div>
             <Header sticky={isSticky} />
-            <PageHeader element={element} />
+            <PageHeader element={element}  entity={service} />
           </div>
         </div>
       <div className='pb-4 bg-ids-dark-green'>
@@ -76,8 +76,10 @@ function Index({ allServices, service}) {
 export async function getServerSideProps(context) {
   console.log(context.query.id)
   const allServices = await getAllServices()
-  const service = await getAServiceByID(context.query.id)
-  console.log(service)
+  let service = allServices.items[0]
+  if(context.query.id) {
+    service = await getAServiceByID(context.query.id)
+  } 
   return {
     props: { allServices, service },
   }
