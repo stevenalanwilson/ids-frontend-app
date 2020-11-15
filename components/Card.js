@@ -19,15 +19,18 @@ const ctaButtonStyles = [
   'transform'
 ]
 
-function Card ({ data }) {
+
+function Card ({ data, path }) {
+  const graphic = data.fields.casestudyPhotos ? data.fields.casestudyPhotos[0].fields.file.url : data.fields.graphic.fields.file?.url
+
   return (
     <div className={data.size + ' ' + ctaButtonStyles.join(' ').toString()}>
       <Link href={{
-              pathname: '/services',
+              pathname: path,
               query: { id: data.sys.id },
             }}>
         <a>
-          <img src={data.fields.graphic.fields.file?.url} alt={data.fields.graphic.fields?.title} />
+          <img src={graphic} alt={data.fields?.name} />
           <div className='details min-h-85px'>
             <p className='font-open-sans font-light text-black group-hover:text-white p-4  text-lg border-'>
               {data.fields?.name}
