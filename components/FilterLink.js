@@ -25,7 +25,7 @@ const transistionStyles = [
       ]
       
     return (
-        <Link href={{
+        <Link scroll={false} href={{
             pathname: '/casestudies',
             query: {
                 category: category,
