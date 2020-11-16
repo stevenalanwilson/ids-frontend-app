@@ -9,11 +9,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "@contentful/rich-text-from-markdown": "^14.1.2",
+    "@contentful/rich-text-react-renderer": "^14.1.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
-    "contentful": "^7.14.8",
+    "contentful": "^7.14.12",
     "next": "9.3.5",
     "next-google-fonts": "^1.2.1",
     "react": "16.13.1",
