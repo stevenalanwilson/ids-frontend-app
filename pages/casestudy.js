@@ -2,17 +2,20 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import CaseStudyHeader from '../components/CaseStudyHeader'
+import Gallery from "react-photo-gallery";
+import Card from '../components/Card'
+
+
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from '@contentful/rich-text-types'
-
 
 const { richTextFromMarkdown } = require('@contentful/rich-text-from-markdown');
 
 import useSticky from '../hooks/useSticky.js'
 
-import { getACaseSudyByID } from '../lib/api'
+import { getACaseSudyByID, getAllCaseStuies } from '../lib/api'
 
-function Index({ casestudy, body }) {
+function Index({ casestudy, body, photos, casestudies }) {
 
   const { isSticky, element } = useSticky()
   
@@ -70,14 +73,28 @@ function Index({ casestudy, body }) {
         </div>
       <div className='pb-4 bg-white'>
         <div className='container flex mx-auto '>
-          <div className='w-3/4 p-5'>
+          <div className='w-3/4 p-10'>
             <h2 className='text-3xl text-black font-open-sans font-light mb-4'>{casestudy.fields.name}</h2>
             {documentToReactComponents(body, options)}
+            <Gallery photos={photos} />
           </div>
           <div className='w-1/4 p-10'></div>
         </div>
       </div>
       <div className='pb-4 bg-ids-green h-50px'></div>
+      <div className='pb-4 bg-ids-dark-green'>
+        <div className='container mx-auto '>
+          <div className='w-full pt-4 px-10 pb-10'>
+            <h2 className='text-5xl text-white font-open-sans font-light mb-4'>More case studies</h2>
+            <ul className='flex flex-wrap list-none'>
+              {casestudies.items.map(entry => {
+                return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/casestudy'/></li>
+              }
+              )}
+            </ul>
+          </div>
+        </div>
+      </div>
       <div className='bg-black'>
           <div className='container mx-auto '>
             <div className='w-full'>
@@ -95,9 +112,17 @@ function Index({ casestudy, body }) {
 export async function getServerSideProps(context) {
   if(context.query.id) {
     const casestudy = await getACaseSudyByID(context.query.id)
+    const casestudies = await getAllCaseStuies()
+    const photos = casestudy.fields.casestudyPhotos.map( photo => {
+      return {
+        src: photo.fields.file.url,
+        width: 4,
+        height: 3
+      }
+    })
     const body = await richTextFromMarkdown(casestudy.fields.casestudyDescription);
     return {
-      props: { casestudy, body }
+      props: { casestudy, body, photos, casestudies }
     }
   } 
 }
