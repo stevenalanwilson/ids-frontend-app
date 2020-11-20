@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleRight, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 const transistionStyles = [
   'transition',
@@ -25,12 +25,12 @@ const ctaButtonStyles = [
   'font-light'
 ]
 
-function CallToActionLink ({ data }) {
+function CallToActionLink ({ data, handleToggleVisibility, isFormOpen }) {
   return (
     <Link href={data.link}>
-      <a className={data.size + ' ' + ctaButtonStyles.join(' ').toString()} href={data.link}>
-        {data.name}
-        <FontAwesomeIcon size='lg' icon={faArrowCircleRight} className='ml-2' />
+      <a className={data.size + ' ' + ctaButtonStyles.join(' ').toString()} href={data.link} onClick={handleToggleVisibility}>
+        {isFormOpen ? data.alt : data.name}
+        <FontAwesomeIcon size='lg' icon={isFormOpen ? faTimesCircle : faArrowCircleRight} className='ml-2' />
       </a>
     </Link>
   )

@@ -1,3 +1,5 @@
+import {useEffect, useState, useRef} from 'react'
+
 import Link from 'next/link'
 import Card from '../components/Card'
 import Head from 'next/head'
@@ -17,6 +19,12 @@ const testimonial = randomTestimonial(casestudyData)
 
 export default function Index({ allServices, allSectors, allClients }) {
   const { isSticky, element } = useSticky()
+  const [isFormOpen, setFormOpen] = useState(false)
+
+  const handleToggleVisibility = (e) => {
+    e.preventDefault()
+    setFormOpen(!isFormOpen)
+  }
 
   return (
     <>
@@ -35,7 +43,7 @@ export default function Index({ allServices, allSectors, allClients }) {
       <main className='relative w-full'>
         <div>
           <div>
-            <Header sticky={isSticky} />
+            <Header sticky={isSticky} isFormOpen={isFormOpen} handleToggleVisibility={handleToggleVisibility}/>
             <Hero element={element} />
           </div>
         </div>
