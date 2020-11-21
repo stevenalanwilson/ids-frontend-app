@@ -63,7 +63,7 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
   ]
   return (
     <>
-    <div className={formStyles.join(' ').toString()}>
+      <div className={formStyles.join(' ').toString()}>
         <div id='enquiry' className='container mx-auto px-4 pt-20 h-600px'>
           <div className='w-full px-10 pt-10 pb-5'>
             <h2 className='text-5xl text-white font-open-sans font-light'>How can we help?</h2>
@@ -87,7 +87,7 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
             })}
 
             <li className='ml-auto'>
-            <CallToActionLink
+              <CallToActionLink
                 data={howCanWeHelp}
                 handleToggleVisibility={handleToggleVisibility}
                 isFormOpen={isFormOpen}
