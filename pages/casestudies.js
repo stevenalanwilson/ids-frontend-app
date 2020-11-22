@@ -42,8 +42,8 @@ function Index ({ allSectors, allServices, sector, casestudies, current }) {
           </div>
           <div className='pb-4 bg-ids-dark-green'>
             <div className='container flex mx-auto '>
-              <div className='w-1/4 p-5'>
-                <div className='p-10 bg-white'>
+              <div className='hidden sm:block md:w-1/4 p-5'>
+                <div className='md:p-5 lg:p-10 bg-white'>
                   <h2 className='text-3xl text-black font-open-sans font-light mb-4'>Filter</h2>
 
                   <h3 className='text-2xl text-black font-open-sans font-light mb-2'>Sectors</h3>
@@ -65,11 +65,11 @@ function Index ({ allSectors, allServices, sector, casestudies, current }) {
                   </ul>
                 </div>
               </div>
-              <div className='w-3/4 p-10'>
+              <div className='w-full md:w-3/4 p-10'>
                 <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Case Studies</h2>
                 <ul className='flex flex-wrap list-none'>
                   {casestudies.items.map(entry => {
-                    return <li className='w-1/4 flex-none p-2'><Card data={entry} path='/casestudy' /></li>
+                    return <li className='w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 flex-none p-2'><Card data={entry} path='/casestudy' /></li>
                   }
                   )}
                 </ul>

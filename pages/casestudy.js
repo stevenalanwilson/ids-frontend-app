@@ -79,12 +79,12 @@ function Index ({ casestudy, body, photos, casestudies }) {
           </div>
           <div className='pb-4 bg-white'>
             <div className='container flex mx-auto '>
-              <div className='w-3/4 p-10'>
+              <div className='w-full md:w-3/4 p-10'>
                 <h2 className='text-3xl text-black font-open-sans font-light mb-4'>{casestudy.fields.name}</h2>
                 {documentToReactComponents(body, options)}
                 <Gallery photos={photos} />
               </div>
-              <div className='w-1/4 p-10' />
+              <div className='hidden : md:block w-1/4 p-10' />
             </div>
           </div>
           <div className='pb-4 bg-ids-green h-50px' />
@@ -94,7 +94,7 @@ function Index ({ casestudy, body, photos, casestudies }) {
                 <h2 className='text-5xl text-white font-open-sans font-light mb-4'>More case studies</h2>
                 <ul className='flex flex-wrap list-none'>
                   {casestudies.items.map(entry => {
-                    return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/casestudy' /></li>
+                    return <li className='w-full sm:w-1/2 md:w-1/4 lg:w-1/6 flex-none p-2'><Card data={entry} path='/casestudy' /></li>
                   }
                   )}
                 </ul>

@@ -52,7 +52,7 @@ export default function Index ({ allServices, allSectors, allClients }) {
                 <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Services</h2>
                 <ul className='flex flex-wrap list-none'>
                   {allServices.items.map(entry => {
-                    return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/services' /></li>
+                    return <li className='w-full sm:w-1/2 md:w-1/4 lg:w-1/6 flex-none p-2'><Card data={entry} path='/services' /></li>
                   }
                   )}
                 </ul>
@@ -61,18 +61,18 @@ export default function Index ({ allServices, allSectors, allClients }) {
           </div>
 
           <div className='pb-4 bg-ids-green'>
-            <div className='container flex mx-auto '>
-              <div className='w-1/2 p-10'>
+            <div className='container flex flex-wrap mx-auto '>
+              <div className='w-full md:w-1/2 p-10'>
                 <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Sectors</h2>
                 <ul className='flex flex-wrap'>
                   {allSectors.items.map(entry => {
-                    return <li className='w-1/3 flex-none p-2'><Card data={entry} path='/services' /></li>
+                    return <li className='w-full sm:w-1/2 md:w-1/2 lg:w-1/3 flex-none p-2'><Card data={entry} path='/services' /></li>
                   }
                   )}
                 </ul>
               </div>
 
-              <div className='w-1/2 p-10'>
+              <div className='w-full md:w-1/2 p-10'>
                 <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Testimonials</h2>
                 <p className='italic text-2xl font-open-sans font-light text-white'>"{testimonial.testimonials[0]}" - <Link href={testimonial.link}><a className='underline'>{testimonial.company}</a></Link></p>
 
@@ -86,7 +86,7 @@ export default function Index ({ allServices, allSectors, allClients }) {
                 <h2 className='text-5xl text-black font-open-sans font-light mb-4'>Who we work with</h2>
                 <ul className='flex flex-wrap list-none'>
                   {allClients.items.map(entry => {
-                    return <li className='w-1/6 flex-none p-2'><img src={entry.fields.logo.fields.file.url} alt={entry.fields.logo.fields.title} /></li>
+                    return <li className='w-full sm:w-1/2 md:w-1/4 lg:w-1/6 flex-none p-2'><img src={entry.fields.logo.fields.file.url} alt={entry.fields.logo.fields.title} /></li>
                   }
                   )}
                 </ul>

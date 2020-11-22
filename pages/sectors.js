@@ -43,7 +43,7 @@ function Index ({ allSectors, sector, casestudies }) {
               <div className='w-full pt-4 px-10 pb-10'>
                 <ul className='flex flex-wrap list-none'>
                   {allSectors.items.map(entry => {
-                    return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/sectors' /></li>
+                    return <li className='w-full sm:w-1/2 md:w-1/4 lg:w-1/6  flex-none p-2'><Card data={entry} path='/sectors' /></li>
                   }
                   )}
                 </ul>
@@ -57,7 +57,7 @@ function Index ({ allSectors, sector, casestudies }) {
                 <h2 className='text-5xl text-black font-open-sans font-light mb-4'>Case studies</h2>
                 <ul className='flex flex-wrap list-none'>
                   {casestudies.items.map(entry => {
-                    return <li className='w-1/6 flex-none p-2'><Card data={entry} path='/casestudy' /></li>
+                    return <li className='w-full sm:w-1/2 md:w-1/4 lg:w-1/6  flex-none p-2'><Card data={entry} path='/casestudy' /></li>
                   }
                   )}
                 </ul>
