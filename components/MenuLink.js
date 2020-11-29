@@ -10,16 +10,16 @@ const transistionStyles = [
 
 const buttonStyles = [
   ...transistionStyles,
-  'inline-block',
-  'border',
-  'border-transparent',
-  'rounded',
-  'text-black',
-  'hover:border-ids-orange',
-  'hover:text-white',
-  'hover:bg-ids-orange',
-  'py-1',
-  'px-3',
+  'lg:inline-block',
+  'lg:border',
+  'lg:border-transparent',
+  'lg:rounded',
+  'lg:text-black',
+  'lg:hover:border-ids-orange',
+  'lg:hover:text-white',
+  'lg:hover:bg-ids-orange',
+  'lg:py-1',
+  'lg:px-3',
   'font-open-sans',
   'font-light'
 ]
@@ -33,12 +33,11 @@ const map = {
 
 function MenuLink ({ data }) {
   return (
-    <li className='mr-6'>
+    <li className='p-5 border-b lg:p-0 lg:border-0 lg:mr-6'>
       <Link href={data.link}>
         <a href='#' className={buttonStyles.join(' ').toString()}>
           {data.name}
           <FontAwesomeIcon size='lg' icon={map[data.name]} className='ml-2' />
-
         </a>
 
       </Link>

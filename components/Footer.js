@@ -5,7 +5,7 @@ function Footer () {
     <footer className='p-10 bg-black'>
 
       <nav>
-        <ul className='flex items-center'>
+        <ul className='hidden lg:flex items-center'>
           <li className='mr-6'>
             <Link href='/index'>
               <a href='#'>

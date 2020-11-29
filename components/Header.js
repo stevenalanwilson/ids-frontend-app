@@ -77,9 +77,9 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
         </div>
       </div>
       <header className={sticky ? headerStyle.join(' ').toString() + ' ' + stickyHeaderStyle.join(' ').toString() : headerStyle.join(' ').toString()}>
-        <nav className='container mx-auto px-4'>
-          <ul className='hidden lg:flex  items-center'>
-            <li className='mr-6'>
+        <nav className='lg:container lg:mx-auto lg:px-4'>
+          <ul className='lg:flex lg:items-center'>
+            <li className='mr-6 hidden lg:inline-block'>
               <Link href='/index'>
                 <a href='#'>
                   <img src='../ids-logo.svg' alt='Logo' className='h-16' />
@@ -91,30 +91,35 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
               return <MenuLink key={val.key} data={val} />
             })}
 
-            <li className='ml-auto'>
+            <li className='ml-auto  hidden lg:inline-block'>
               <CallToActionLink
                 data={howCanWeHelp}
                 handleToggleVisibility={handleToggleVisibility}
                 isFormOpen={isFormOpen}
               />
-              <Link href='tel:5554280940'>
+              <Link href='tel:5554280940 hidden lg:inline-block'>
                 <a className='inline-block py-1 px-3 ml-2 font-open-sans font-light text-black cursor-not-allowed' href='tel:5554280940'>01889 568573</a>
               </Link>
             </li>
           </ul>
         </nav>
         <ul className='flex lg:hidden  items-center'>
-          <li className='mr-6'>
+          <li className='ml-2'>
             <Link href='/index'>
               <a href='#'>
-                <img src='../ids-logo.svg' alt='Logo' className='m-2 h-16' />
+                <img src='../ids-logo.svg' alt='Logo' className='p-1 h-16' />
               </a>
+            </Link>
+          </li>
+          <li>
+            <Link href='tel:5554280940'>
+              <a className='inline-block py-1 px-3 ml-2 font-open-sans font-light text-black cursor-not-allowed' href='tel:5554280940'>01889 568573</a>
             </Link>
           </li>
           <li className='ml-auto'>
             <Link href='/index'>
-              <a className='bg-ids-orange m-0 text-white inline-block lg:hidden'>
-                <FontAwesomeIcon size='lg' icon={faBars} className='m-5' />
+              <a href='#' className='bg-ids-orange m-0 text-white inline-block lg:hidden'>
+                <FontAwesomeIcon size='lg' icon={faBars} className='m-6' />
               </a>
             </Link>
           </li>
