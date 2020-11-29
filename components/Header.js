@@ -43,7 +43,7 @@ const stickyHeaderStyle = [
   'border-opacity-25'
 ]
 
-function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
+function Header ({ sticky, element, isFormOpen, handleToggleVisibility, isMobileMenuOpen, handleMobileMenuToggleVisibility }) {
   const formStyles = [
     ...transistionStyles,
     'bg-ids-orange',
@@ -66,6 +66,12 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
     'lg:bg-transparent',
     isFormOpen ? 'bg-white' : ''
   ]
+
+  const mobileMenu = [
+    'lg:flex',
+    'lg:items-center',
+    isMobileMenuOpen ? '' : 'hidden'
+  ]
   return (
     <>
       <div className={formStyles.join(' ').toString()}>
@@ -78,7 +84,8 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
       </div>
       <header className={sticky ? headerStyle.join(' ').toString() + ' ' + stickyHeaderStyle.join(' ').toString() : headerStyle.join(' ').toString()}>
         <nav className='lg:container lg:mx-auto lg:px-4'>
-          <ul className='lg:flex lg:items-center'>
+
+          <ul id='mobileMenu' className={mobileMenu.join(' ').toString()}>
             <li className='mr-6 hidden lg:inline-block'>
               <Link href='/index'>
                 <a href='#'>
@@ -118,7 +125,7 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
           </li>
           <li className='ml-auto'>
             <Link href='/index'>
-              <a href='#' className='bg-ids-orange m-0 text-white inline-block lg:hidden'>
+              <a href='#' className='bg-ids-orange m-0 text-white inline-block lg:hidden' onClick={handleMobileMenuToggleVisibility}>
                 <FontAwesomeIcon size='lg' icon={faBars} className='m-6' />
               </a>
             </Link>

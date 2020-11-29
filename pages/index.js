@@ -20,9 +20,16 @@ export default function Index ({ allServices, allSectors, allClients }) {
   const { isSticky, element } = useSticky()
   const [isFormOpen, setFormOpen] = useState(false)
 
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   const handleToggleVisibility = (e) => {
     e.preventDefault()
     setFormOpen(!isFormOpen)
+  }
+
+  const handleMobileMenuToggleVisibility = (e) => {
+    e.preventDefault()
+    setMobileMenuOpen(!isMobileMenuOpen)
   }
 
   return (
@@ -42,7 +49,13 @@ export default function Index ({ allServices, allSectors, allClients }) {
         <main className='relative w-full'>
           <div>
             <div>
-              <Header sticky={isSticky} isFormOpen={isFormOpen} handleToggleVisibility={handleToggleVisibility} />
+              <Header
+                sticky={isSticky}
+                isFormOpen={isFormOpen}
+                handleToggleVisibility={handleToggleVisibility}
+                isMobileMenuOpen={isMobileMenuOpen}
+                handleMobileMenuToggleVisibility={handleMobileMenuToggleVisibility}
+              />
               <Hero element={element} />
             </div>
           </div>
