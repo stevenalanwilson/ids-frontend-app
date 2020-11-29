@@ -3,6 +3,9 @@ import CallToActionLink from '../components/CallToActionLink'
 import MenuLink from '../components/MenuLink'
 import EnquiryForm from '../components/EnquiryForm'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 const howCanWeHelp = {
   name: 'How can we help?',
   alt: 'Close',
@@ -34,7 +37,7 @@ const transistionStyles = [
 ]
 
 const stickyHeaderStyle = [
-  'bg-white',
+  'lg:bg-white',
   'border-b-4',
   'border-grey',
   'border-opacity-25'
@@ -53,12 +56,14 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
   ]
   const headerStyle = [
     ...transistionStyles,
-    'py-4',
+    'lg:py-4',
     'fixed',
     'z-50',
     'top-0',
     'left-0',
     'w-full',
+    'bg-white',
+    'lg:bg-transparent',
     isFormOpen ? 'bg-white' : ''
   ]
   return (
@@ -73,7 +78,7 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
       </div>
       <header className={sticky ? headerStyle.join(' ').toString() + ' ' + stickyHeaderStyle.join(' ').toString() : headerStyle.join(' ').toString()}>
         <nav className='container mx-auto px-4'>
-          <ul className='flex items-center'>
+          <ul className='hidden lg:flex  items-center'>
             <li className='mr-6'>
               <Link href='/index'>
                 <a href='#'>
@@ -98,6 +103,23 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility }) {
             </li>
           </ul>
         </nav>
+        <ul className='flex lg:hidden  items-center'>
+          <li className='mr-6'>
+            <Link href='/index'>
+              <a href='#'>
+                <img src='../ids-logo.svg' alt='Logo' className='m-2 h-16' />
+              </a>
+            </Link>
+          </li>
+          <li className='ml-auto'>
+            <Link href='/index'>
+              <a className='bg-ids-orange m-0 text-white inline-block lg:hidden'>
+                <FontAwesomeIcon size='lg' icon={faBars} className='m-5' />
+              </a>
+            </Link>
+          </li>
+        </ul>
+
       </header>
     </>
   )
