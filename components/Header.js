@@ -94,9 +94,9 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility, isMobile
               </Link>
             </li>
 
-            {menuData.map(function (val) {
+            {/* {menuData.map(function (val) {
               return <MenuLink key={val.key} data={val} />
-            })}
+            })} */}
 
             <li className='ml-auto  hidden lg:inline-block'>
               <CallToActionLink

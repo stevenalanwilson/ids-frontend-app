@@ -24,7 +24,7 @@ function Hero ({ element }) {
           <p className='font-open-sans font-light text-black text-xl mb-4'>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
           </p>
-          <CallToActionLink data={howCanWeHelp} />
+          {/* <CallToActionLink data={howCanWeHelp} /> */}
         </div>
       </div>
       <div className='green-triangle-bottomleft' />

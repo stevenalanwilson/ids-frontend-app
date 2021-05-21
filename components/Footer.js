@@ -13,7 +13,7 @@ function Footer () {
               </a>
             </Link>
           </li>
-          <li className='mr-3'>
+          {/* <li className='mr-3'>
             <Link href='/index'>
               <a className='inline-block text-white py-1 px-3 hover:underline' href='#'>Home</a>
             </Link>
@@ -37,7 +37,7 @@ function Footer () {
             <Link href='/contact'>
               <a className='inline-block text-white py-1 px-3 hover:underline' href='#'>Contact</a>
             </Link>
-          </li>
+          </li> */}
           <li className='ml-auto'>
             <a className='inline-block py-1 px-3  text-white cursor-not-allowed' href='#'>01889 568573</a>
           </li>
