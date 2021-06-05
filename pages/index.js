@@ -11,12 +11,13 @@ import useSticky from '../hooks/useSticky.js'
 
 import casestudyData from '../data/casestudies'
 
-import { getAllServices, getAllSectors, getAllClients } from '../lib/api'
+import { getAllServices, getAllSectors, getAllClients, getAllCaseStuies } from '../lib/api'
 
 const randomTestimonial = casestudies => casestudies[Math.floor(Math.random() * (casestudies.length - 1))]
+
 const testimonial = randomTestimonial(casestudyData)
 
-export default function Index ({ allServices, allSectors, allClients }) {
+export default function Index ({ allServices, allSectors, allClients, allCaseStudies }) {
   const { isSticky, element } = useSticky()
   const [isFormOpen, setFormOpen] = useState(false)
 
@@ -56,7 +57,7 @@ export default function Index ({ allServices, allSectors, allClients }) {
                 isMobileMenuOpen={isMobileMenuOpen}
                 handleMobileMenuToggleVisibility={handleMobileMenuToggleVisibility}
               />
-              <Hero element={element} />
+              <Hero element={element} data={allCaseStudies.items} />
             </div>
           </div>
           <div className='pb-4 bg-ids-dark-green'>
@@ -124,7 +125,8 @@ export async function getStaticProps () {
   const allServices = await getAllServices()
   const allSectors = await getAllSectors()
   const allClients = await getAllClients()
+  const allCaseStudies = await getAllCaseStuies()
   return {
-    props: { allServices, allSectors, allClients }
+    props: { allServices, allSectors, allClients, allCaseStudies }
   }
 }
