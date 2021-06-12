@@ -78,7 +78,6 @@ function Index ({ allSectors, sector, casestudies }) {
 }
 
 export async function getServerSideProps (context) {
-  console.log(context.query.id)
   const allSectors = await getAllSectors()
   let casestudies = await getAllCaseStuies()
   let sector = allSectors.items[0]

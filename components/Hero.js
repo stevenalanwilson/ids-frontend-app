@@ -14,7 +14,6 @@ const randomCaseStudyGen = casestudy => casestudy[Math.floor(Math.random() * (ca
 
 function Hero ({ element, data }) {
   const randomCaseStudy = randomCaseStudyGen(data)
-  console.log(randomCaseStudy.fields)
   return (
     <div className='w-full relative overflow-hidden'>
       <img src={randomCaseStudy.fields.casestudyPhotos[0].fields.file.url} className='object-cover w-full h-200 h-600px' />

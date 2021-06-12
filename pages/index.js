@@ -20,7 +20,6 @@ const testimonial = randomTestimonial(casestudyData)
 export default function Index ({ allServices, allSectors, allClients, allCaseStudies }) {
   const { isSticky, element } = useSticky()
   const [isFormOpen, setFormOpen] = useState(false)
-
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const handleToggleVisibility = (e) => {
