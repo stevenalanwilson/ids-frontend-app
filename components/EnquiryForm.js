@@ -1,21 +1,33 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
-import React from 'react';
+import React, { useState } from 'react';
+
 import { useForm, ValidationError } from '@formspree/react';
 import CallToActionLink from '../components/CallToActionLink'
 
-
-
-
-
 function EnquiryForm() {
   const [state, handleSubmit] = useForm("xyyljewk");
-  if (state.succeeded) {
+  const [submitting, setSubmitting] = useState(false);
+  
+  if (state.submitting) {
+    setTimeout(() => {
+      setSubmitting(true);
+    }, 10)
     return (
     <div className='w-1/2 px-10'>
-      <p className='block text-white text-sm font-open-sans font-light mb-2'>Thanks for your enquiry!</p>
+      <p className='block text-white text-m font-open-sans font-light mb-2'>Submitting your enquiry </p>
     </div>)
-} 
+  }
+
+  if (submitting && state.succeeded) {
+    setTimeout(() => {
+      setSubmitting(false);
+    }, 1000)
+    return (
+    <div className='w-1/2 px-10'>
+      <p className='block text-white text-m font-open-sans font-light mb-2'>Thanks for your enquiry, our team will be in contact soon</p>
+    </div>)
+  } 
 
   return (
     <form className='flex' onSubmit={handleSubmit}>
