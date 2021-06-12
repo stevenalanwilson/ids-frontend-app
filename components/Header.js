@@ -123,13 +123,13 @@ function Header ({ sticky, element, isFormOpen, handleToggleVisibility, isMobile
               <a className='inline-block py-1 px-3 ml-2 font-open-sans font-light text-black cursor-not-allowed' href='tel:5554280940'>01889 568573</a>
             </Link>
           </li>
-          <li className='ml-auto'>
+          {/* <li className='ml-auto'>
             <Link href='/index'>
               <a href='#' className='bg-ids-orange m-0 text-white inline-block lg:hidden' onClick={handleMobileMenuToggleVisibility}>
                 <FontAwesomeIcon size='lg' icon={faBars} className='m-6' />
               </a>
             </Link>
-          </li>
+          </li> */}
         </ul>
 
       </header>
