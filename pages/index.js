@@ -87,7 +87,7 @@ export default function Index ({ allServices, allSectors, allClients, allCaseStu
 
               <div className='w-full md:w-1/2 p-10'>
                 <h2 className='text-5xl text-white font-open-sans font-light mb-4'>Testimonials</h2>
-                <p className='italic text-2xl font-open-sans font-light text-white'>"{testimonial.testimonials[0]}" - <Link href={testimonial.link}><a className='underline'>{testimonial.company}</a></Link></p>
+                <p className='italic text-2xl font-open-sans font-light text-white'>"Great services, would definitely recommend"</p>
 
               </div>
             </div>
